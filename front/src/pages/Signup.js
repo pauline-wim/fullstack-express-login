@@ -13,6 +13,9 @@ export default function Signup() {
   } = useForm();
 
   const onSubmit = (data) => {
+    //   TODO: check password !
+    users.setIsSignedUp(true);
+    users.setSignupDisplay(false);
     users.setUsers((prev) => [
       ...prev,
       {
